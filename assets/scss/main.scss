@@ -1,3 +1,11 @@
 @import "global";
 @import "variables";
-@import "components/test";
+@import "mixins";
+@import "extends";
+
+@import "pages/home";
+@import "pages/about";
+@import "pages/personal-training";
+@import "pages/reviews";
+@import "pages/contact";
+@import "pages/programs";
