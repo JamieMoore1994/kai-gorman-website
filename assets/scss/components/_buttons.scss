@@ -3,10 +3,33 @@
     text-decoration: none;
     color: $color-grey-light;
     padding: 1.5rem 3rem;
-    font-weight: 700;
-    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 10rem;
+    transition: all 200ms ease-in;
+
+    &:hover, &:focus {
+        transform: translateY(-.3rem);
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+    }
 }
 
 .btn.btn-light {
     background-color: $color-green-light;
+
+    &:hover, &:focus {
+        background-color: $color-green-main;
+    }
+}
+
+.btn.btn-dark {
+    background-color: $color-green-main;
+
+    &:hover, &:focus {
+        background-color: $color-green-light;
+    }
+       
 }

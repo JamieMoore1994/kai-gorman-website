@@ -1,0 +1,12 @@
+.main__titles {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.2;
+    color: $color-green-main;
+    font-weight: 700;
+    margin: 2rem 0;
+}
+
+.main__titles.title__light {
+    color: $color-green-light;
+}

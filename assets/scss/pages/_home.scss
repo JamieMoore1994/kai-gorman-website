@@ -3,33 +3,157 @@
 -----------------------------*/
 .page__header {
     background-color: $color-black;
-    @include flexColumn;
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 0 2rem;
+
+    &--wrapper {
+        @include flexColumnStart
+    }
 
     &--titles {
         color: $color-grey-light;
         text-transform: uppercase;
-        font-size: 3rem;
+        font-size: 3.2rem;
         line-height: 1.2;
         margin: .5rem 0;
     }
     &--intro {
         font-size: 2rem;
         margin: 0 0 1.2rem 0;
-    }
-
-    &--intro {
         color: $color-green-light;
     }
+
+    &--image {
+        @include flexCentre;
+        margin-top: 2rem;
+    }
+
+}
+
+/*-----------------------------
+    Services section
+-----------------------------*/
+.help {
+    padding: 2rem;
+
+    &__services {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &__box {
+        @include flexColumnCenter;
+        @include boxShadow;
+        padding: 2rem 3rem;
+        margin: 4rem 0;
+        background-color: $color-white;
+        transition: all 200ms ease-in-out;
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 0 2rem;
+        }
+
+        &:hover, &:focus {
+            transform: translateY(-.3rem);
+        }
+
+        &:active {
+            transform: translateY(-.1rem);
+        }
+    }
+
+    &__title {
+        color: $color-green-main;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__icons {
+        height: 20rem;
+        width: 20rem;
+        fill: $color-green-main;
+        margin: 1.4rem 0;
+    }
 }
 
 
+/*-----------------------------
+    Testimionial section
+-----------------------------*/
 
+.survey {
+    background-color: $color-black;
+    padding: 2rem 2rem 5rem 2rem;
 
+    &__image {
+        position: relative;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
 
+    &__img {
+        padding: 2rem 0;
+    }
 
-.help__icons {
-    height: 20rem;
-    width: 20rem;
-    fill: $color-green-main;
+    &__before {
+        position: absolute;
+        top: 0;
+        left: 20%;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+    }
+
+    &__after {
+        position: absolute;
+        top: 0;
+        right: 20%;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+    }
+
+    &__question {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+    }
+
+    &__responses {
+        p {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        p:last-of-type {
+            margin-bottom: 4rem;
+        }
+    }
+
 }
+
+/*-----------------------------
+    Choose Kai section
+-----------------------------*/
+
+.choose {
+    margin-top: 3rem;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img--section {
+        margin: 4rem 0 2rem 0;
+    }
+
+    &__list--section {
+        margin-bottom: 2rem;
+    }
+}
+
+
