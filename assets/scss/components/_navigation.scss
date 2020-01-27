@@ -1,0 +1,104 @@
+/*------------------------------
+    Accessibibility
+------------------------------*/
+.skip-link {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: background-color 200ms ease;
+
+    &:focus {
+        display: block;
+        font-size: 1.5rem;
+        height: auto;
+        width: auto;
+        padding: 1.4rem 2rem;
+        background-color: $color-green-main;
+        color: $color-grey-light;
+        clip: auto;
+        border-radius: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        animation: skipLink 400ms ease-in;
+        z-index: 1000;
+    }
+}
+
+@keyframes skipLink {
+    0% {
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*------------------------------
+    
+------------------------------*/
+.master__header {
+    background-color: $color-black;
+    min-height: 12vh;
+    padding: 2rem;
+
+    &--container {
+        @include flexBetween;
+    }
+
+    &--nav {
+        background-color: $color-black;
+        position: absolute;
+        top: 12vh;
+        right: 0;
+        width: 50%;
+        z-index: 10;
+        transition: all 0.2s ease-in;
+        transform: translateX(100%);
+    }
+
+    &--links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 88vh;
+
+        a {
+            text-decoration: none;
+            color: $color-grey-light;
+            font-size: 1.4rem;
+        }
+    }
+
+    // Target with javascript
+    .nav-toggle {
+        transform: translateX(0);
+    }
+
+    // Avoid body scroll when user clicks burger nav
+    .body-toggle {
+        overflow: hidden;
+    }
+
+    &--burger {
+        display: block;
+        cursor: pointer;
+
+        div {
+            width: 3rem;
+            height: .4rem;
+            margin: .5rem;
+            border-radius: .5rem;
+            background-color: $color-grey-light;
+        }
+    }
+}

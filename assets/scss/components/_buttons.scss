@@ -1,0 +1,12 @@
+.btn {
+    border: none;
+    text-decoration: none;
+    color: $color-grey-light;
+    padding: 1.5rem 3rem;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+.btn.btn-light {
+    background-color: $color-green-light;
+}

@@ -4,6 +4,25 @@
     align-items: center;
 }
 
+@mixin flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexColumn {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @mixin maxWidth {
     max-width: 1200px;
     margin: 0 auto;
