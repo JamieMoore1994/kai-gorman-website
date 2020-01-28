@@ -1,3 +1,4 @@
+//------Flex Mixins-----//
 @mixin flexCentre {
     display: flex;
     justify-content: center;
@@ -8,6 +9,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+@mixin flexAroundStart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 @mixin flexBetween {
@@ -25,11 +32,13 @@
 
 @mixin flexColumnCenter {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
 
+
+//-------Max Width------//
 @mixin maxWidth {
     max-width: 1200px;
     margin: 0 auto;

@@ -147,12 +147,35 @@
         flex-direction: column;
     }
 
-    &__img--section {
-        margin: 4rem 0 2rem 0;
+    &__list--section {
+        padding: 0 4rem;
+        margin: 2rem 0;
+    }
+    &__list {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        @include flexColumnStart;
+
+        li {
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+/*-----------------------------
+    Kai location section
+-----------------------------*/
+.location {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    @include flexColumnCenter;
+
+    p {
+        font-size: 1.5rem;
     }
 
-    &__list--section {
-        margin-bottom: 2rem;
+    a {
+        margin: 1.5rem 0;
     }
 }
 

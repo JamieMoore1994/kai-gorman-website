@@ -43,7 +43,7 @@
 }
 
 /*------------------------------
-    
+    Navigation
 ------------------------------*/
 .master__header {
     background-color: $color-black;
@@ -52,6 +52,10 @@
 
     &--container {
         @include flexBetween;
+
+        @media screen and (min-width: 52.43em) {
+            @include maxWidth;
+        }
     }
 
     &--nav {
@@ -59,10 +63,21 @@
         position: absolute;
         top: 12vh;
         right: 0;
-        width: 50%;
+        width: 70%;
         z-index: 10;
         transition: all 0.2s ease-in;
         transform: translateX(100%);
+
+        @media screen and (min-width: 52.43em) {
+            position: unset;
+            transition: unset;
+            transform: translateX(0);
+            width: 70%;
+        }
+
+        @media screen and (min-width: 56.87em) {
+            width: 60%;
+        }
     }
 
     &--links {
@@ -76,6 +91,18 @@
             text-decoration: none;
             color: $color-grey-light;
             font-size: 1.4rem;
+
+            @media screen and (min-width: 52.43em) {
+                font-size: 1.8rem;
+                padding: 0 1rem;
+            }
+
+        }
+
+        @media screen and (min-width: 52.43em) {
+            flex-direction: row;
+            justify-content: space-around;
+            height: unset;
         }
     }
 
@@ -99,6 +126,10 @@
             margin: .5rem;
             border-radius: .5rem;
             background-color: $color-grey-light;
+        }
+
+        @media screen and (min-width: 37.5em) {
+            display: none;
         }
     }
 }

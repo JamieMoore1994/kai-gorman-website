@@ -23,11 +23,11 @@
 
             <nav class="master__header--nav">
                 <ul class = "master__header--links">
-                    <li><a href="index.html" title = "Home page">Home</a></li>
-                    <li><a href="about.html" title = "About page">About</a></li>
-                    <li><a href="personal-training.html" title = "Personal training page">Personal Training</a></li>
-                    <li><a href="reviews.html" title = "Reviews page">Reviews</a></li>
-                    <li><a href="contact.html"title = "Contact me page">Contact</a></li>
+                    <li><a href="index.html" title = "Home page" class = "links-dark">Home</a></li>
+                    <li><a href="about.html" title = "About page" class = "links-dark">About</a></li>
+                    <li><a href="personal-training.html" title = "Personal training page" class = "links-dark">Personal Training</a></li>
+                    <li><a href="reviews.html" title = "Reviews page" class = "links-dark">Reviews</a></li>
+                    <li><a href="contact.html"title = "Contact me page" class = "links-dark">Contact</a></li>
                 </ul>
             </nav>
             <div class="master__header--burger">
@@ -173,11 +173,7 @@
 
             <div class="choose__container">
                 <div class="choose__img--section">
-                    <picture class="choose__img">
-                        <source media = "(max-width: 399px)" srcset= "assets/img/kai-training-small.jpg">
-                        <source media = "(min-width: 400px)" srcset= "assets/img/kai-training.jpg">
-                        <img src="assets/img/kai-training.jpg" alt="Kai gorman deadlifting">
-                    </picture>
+                    <img src="assets/img/kai-selfie-choose.png" alt="An image of Kai Gormal smiling">
                 </div>
 
                 <div class="choose__list--section">
@@ -188,9 +184,8 @@
                         <li class="text-grey-body">I have qualifications above & beyond level 3 personal trainer.</li>
                         <li class="text-grey-body">Client programmes are specific to the individual and their goals.</li>
                         <li class="text-grey-body">I want to achieve your goals just as badly as you do.</li>
-
-                        <a href="contact.html" class="btn btn-light" title = "Contact page">Get in touch with me</a>
                     </ul>
+                    <a href="contact.html" class="btn btn-light" title = "Contact page">Get in touch with me</a>
                 </div>
             </div>
         </section>
@@ -206,18 +201,21 @@
         </section>
     </main>
 
+    <!--Global footer-->
     <footer class="master__footer">
-        <div class="master__footer--container">
+        <div class="main-container">
 
             <div class="master__footer--information">
             <!--Logo amnd instagram area-->
             <div class="master__footer--social">
-                <img src="assets/img/kai-logo.png" alt="Kai Gorman business logo">
-                <a href="#" class="master__footer--instagram" title = "Kai Gorman instagram">
+                <a href = "index.html" title = "Home page">
+                    <img src="assets/img/kai-logo.png" alt="Kai Gorman business logo">
+                </a>
+                <a href="https://www.instagram.com/kaigormantrainer/?hl=en" class="master__footer--instagram" title = "Kai Gorman instagram">
                      <svg aria-labelledby="Instagram"
                      id = "svg" 
                      role = "presentation" class="master__footer--instagram">
-                     <title id = "Instagram" lang = "en">An icon of the Instagram logo</title>
+                     <title id = "Instagram" lang = "en">Follow Kai Gorman on Instagram</title>
                          <use xlink:href = "assets/svg/sprite.svg#icon-instagram"></use>
                      </svg>
                 </a>  
@@ -225,24 +223,27 @@
 
             <!--Useful information area-->
             <div class="master__footer--info">
-                <h3 class="master__footer--titles">Useful Info</h3>
-                <ul class="master__footer--list">
-                    <li>Mobile: 07470098555</li>
-                    <li><a href="mailto: Kaigormanpt@outlook.com">Kaigormanpt@outlook.com</a></li>
-                    <li>Location: Manchester, United Kingdom</li>
-                </ul>
-            </div>
 
-            <!--Useful links area-->
-            <div class="master__footer--info">
-                <h3 class="master__footer--titles">Useful Links</h3>
-                <ul class="master__footer--list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="personal-training.html">Personal Training</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <div class="master__footer--useful">
+                    <h3 class="master__footer--titles text-grey-light">Useful Info</h3>
+                    <ul class="master__footer--list">
+                        <li class = "text-grey-dark">Mobile: 07470098555</li>
+                        <li><a href="mailto: Kaigormanpt@outlook.com" class = "text-grey-dark links">Kaigormanpt@outlook.com</a></li>
+                        <li class = "text-grey-dark">Location: Manchester, United Kingdom</li>
+                    </ul>
+                </div>
+
+                    <!--Useful links area-->
+                <div class="master__footer--useful">
+                    <h3 class="master__footer--titles text-grey-light">Useful Links</h3>
+                    <ul class="master__footer--list">
+                        <li><a href="index.html" class = "text-grey-dark links">Home</a></li>
+                        <li><a href="about.html" class = "text-grey-dark links">About</a></li>
+                        <li><a href="personal-training.html" class = "text-grey-dark links">Personal Training</a></li>
+                        <li><a href="reviews.html" class = "text-grey-dark links">Reviews</a></li>
+                        <li><a href="contact.html" class = "text-grey-dark links">Contact</a></li>
+                    </ul>
+                </div>  
             </div>
 
         </div>
