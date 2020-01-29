@@ -5,21 +5,65 @@
     background-color: $color-black;
     padding: 3rem 2rem 0 2rem;
 
+    &--container {
+        @media screen and (min-width: 40em) {
+            @include maxWidth;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
     &--wrapper {
-        @include flexColumnStart
+        @include flexColumnStart;
+        margin: 2rem 0;
+
+        @media screen and (min-width: 40em) {
+            align-self: flex-start;
+        }
+
+        .btn {
+            margin-top: 1.5rem;
+            @media screen and (min-width: 40em) {
+                font-size: 2.5rem;
+            }
+        }
     }
 
     &--titles {
         color: $color-grey-light;
         text-transform: uppercase;
         font-size: 3.2rem;
+        font-weight: 900;
         line-height: 1.2;
         margin: .5rem 0;
+
+        @media screen and (min-width: 40em) {
+            font-size: 3.6rem;
+        }
+
+        @media screen and (min-width: 50em) {
+            font-size: 4.2rem;
+        }
+
+        @media screen and (min-width: 61em) {
+            font-size: 5rem;
+        }
+
     }
     &--intro {
         font-size: 2rem;
         margin: 0 0 1.2rem 0;
         color: $color-green-light;
+
+        @media screen and (min-width: 40em) {
+            font-size: 2rem;
+        }
+
+        @media screen and (min-width: 61em) {
+            font-size: 2.5rem;
+        }
+        
     }
 
     &--image {
@@ -41,6 +85,15 @@
         a {
             text-decoration: none;
         }
+
+        @media screen and (min-width: 44.9em) {
+            @include maxWidth;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            justify-content: start;
+            align-items: start;
+        }
     }
 
     &__box {
@@ -50,11 +103,22 @@
         margin: 4rem 0;
         background-color: $color-white;
         transition: all 200ms ease-in-out;
+        position: relative;
+
+        @media screen and (min-width: 44.9em) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
             padding: 0 2rem;
+
+            @media screen and (min-width: 44.9em) {
+                font-size: 1.8rem;
+            }
         }
 
         &:hover, &:focus {
@@ -70,6 +134,10 @@
         color: $color-green-main;
         font-size: 2.2rem;
         margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 56.93em) {
+            font-size: 3rem;
+        }
     }
 
     &__icons {
@@ -89,14 +157,39 @@
     background-color: $color-black;
     padding: 2rem 2rem 5rem 2rem;
 
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        @media screen and (min-width: 38.68em) {
+            @include maxWidth;
+        }
+
+        .btn {
+            font-size: 2.7rem;
+        }
+    }
+
     &__image {
         position: relative;
         padding: 2rem;
         margin-top: 2rem;
+
+        @media screen and (min-width: 38.68em) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+        }
     }
 
     &__img {
         padding: 2rem 0;
+
+        @media screen and (min-width: 38.68em) {
+            grid-column: 2/4;
+        }
     }
 
     &__before {
@@ -106,6 +199,20 @@
         font-size: 1.8rem;
         text-transform: uppercase;
         letter-spacing: .2rem;
+
+        @media screen and (min-width: 38.68em) {
+            position: unset;
+            grid-column: 1;
+            grid-row: 1;
+            align-self: center;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: 3rem;
+        }
+
+        @media screen and (min-width: 62.5em) {
+            font-size: 4rem;
+        }
     }
 
     &__after {
@@ -115,21 +222,49 @@
         font-size: 1.8rem;
         text-transform: uppercase;
         letter-spacing: .2rem;
+
+        @media screen and (min-width: 38.68em) {
+            position: unset;
+            grid-column: 4 / 5;
+            grid-row: 1;
+            align-self: center;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: 3rem;
+        }
+
+        @media screen and (min-width: 62.5em) {
+            font-size: 4rem;
+        }
     }
 
     &__question {
-        font-size: 1.8rem;
+        font-size: 2rem;
         padding: 1rem 0;
+
+        @media screen and (min-width: 54.4em) {
+            font-size: 2.5rem;
+        }
     }
 
     &__responses {
         p {
             margin-bottom: 2rem;
             font-size: 1.5rem;
+
+            @media screen and (min-width: 54.4em) {
+                font-size: 1.7rem;
+            }
         }
 
         p:last-of-type {
             margin-bottom: 4rem;
+        }
+
+        @media screen and (min-width: 51.25em) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 4rem;
         }
     }
 
@@ -141,24 +276,66 @@
 
 .choose {
     margin-top: 3rem;
+    padding: 5rem 0;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: .1rem;
+        width: 50%;
+        background-color: $color-green-light;
+        transform: translateX(50%);
+    }
 
     &__container {
         display: flex;
         flex-direction: column;
+
+        @media screen and (min-width: 44.5em) {
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__img--item {
+        clip-path: polygon(0% 0%, 100% 0, 100% 73%, 50% 100%, 0 77%);
+
+        @media screen and (min-width: 44.5em) {
+            clip-path: polygon(0% 0%, 76% 0, 100% 50%, 81% 100%, 0% 100%);
+        }
     }
 
     &__list--section {
         padding: 0 4rem;
         margin: 2rem 0;
+
+        a {
+            @media screen and (min-width: 57em) {
+                font-size: 2rem;
+            }
+        }
     }
     &__list {
         margin-bottom: 3rem;
         font-size: 1.5rem;
         @include flexColumnStart;
 
+        @media screen and (min-width: 57em) {
+            font-size: 2rem;
+        }
+
         li {
             margin-bottom: .5rem;
+
+            @media screen and (min-width: 57em) {
+                margin-bottom: 1rem;
+            }
         }
+
     }
 }
 
@@ -166,16 +343,25 @@
     Kai location section
 -----------------------------*/
 .location {
-    margin-top: 2.5rem;
+    margin: 2.5rem 0;
     padding: 2rem;
     @include flexColumnCenter;
 
     p {
         font-size: 1.5rem;
+
+        @media screen and (min-width: 43.75em) {
+            font-size: 1.8rem;
+        }
     }
 
     a {
         margin: 1.5rem 0;
+
+        @media screen and (min-width: 43.75em) {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
     }
 }
 

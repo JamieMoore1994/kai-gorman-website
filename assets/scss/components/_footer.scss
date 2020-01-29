@@ -2,6 +2,10 @@
     background-color: $color-black;
     padding: 2rem;
 
+    &--container {
+        @include maxWidth;
+    }
+
     a {
         text-decoration: none;
     }
@@ -19,10 +23,19 @@
             height: .1rem;
             background-color: $color-grey-dark;
         }
+
+        @media screen and (min-width: 50em) {
+            @include flexAround;
+            flex-direction: row;
+        }
     }
 
     &--social {
         @include flexColumnCenter;
+
+        @media screen and (min-width: 50em) {
+            align-self: flex-start;
+        }
     }
 
     &--instagram {
@@ -41,6 +54,11 @@
     &--info {
         margin: 4rem 0;
         @include flexAroundStart;
+
+        @media screen and (min-width: 50em) {
+            width: 70%;
+            margin: 2rem 0;
+        }
     }
 
     &--useful {
@@ -75,6 +93,7 @@
             font-size: 1.5rem;
             margin: 1rem 0;
         }
+
     }
     &--credit {
         text-decoration: none;

@@ -5,6 +5,10 @@
     color: $color-green-main;
     font-weight: 700;
     margin: 2rem 0;
+
+    @media screen and (min-width: 56.93em) {
+        font-size: 4rem;
+    }
 }
 
 .main__titles.title__light {
