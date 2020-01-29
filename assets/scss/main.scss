@@ -4,15 +4,16 @@
 @import "extends";
 @import "typography";
 @import "classes";
-
+        
 @import "components/navigation";    
 @import "components/footer";
 @import "components/buttons";   
 @import "components/page-titles";
+@import "components/section-headers";
 
 @import "pages/home";
 @import "pages/about";
 @import "pages/personal-training";
-@import "pages/reviews";s
+@import "pages/reviews";
 @import "pages/contact";
 @import "pages/programs";   
