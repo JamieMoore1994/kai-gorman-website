@@ -1,10 +1,10 @@
 @import "global";
 @import "variables";
 @import "mixins";
-@import "extends";
+@import "extends";  
 @import "typography";
 @import "classes";
-        
+
 @import "components/navigation";    
 @import "components/footer";
 @import "components/buttons";   
@@ -12,7 +12,7 @@
 @import "components/section-headers";
 
 @import "pages/home";
-@import "pages/about";
+@import "pages/about";  
 @import "pages/personal-training";
 @import "pages/reviews";
 @import "pages/contact";
