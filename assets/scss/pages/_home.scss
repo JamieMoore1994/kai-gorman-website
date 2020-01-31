@@ -165,7 +165,11 @@
         }
 
         .btn {
-            font-size: 2.7rem;
+            font-size: 2rem;
+
+            @media screen and (min-width: 38.68em) {
+                font-size: 2.7rem;
+            }
         }
     }
 
@@ -276,9 +280,12 @@
 -----------------------------*/
 
 .choose {
-    margin-top: 3rem;
     padding: 5rem 0;
     position: relative;
+
+    .main__titles {
+        margin-bottom: 3rem;
+    }
 
     &::after {
         content: '';
@@ -346,7 +353,11 @@
 .location {
     margin: 2.5rem 0;
     padding: 2rem;
-    @include flexColumnCenter;
+    @include flexColumnStart;
+
+    @media screen and (min-width: 44.5em) {
+        @include flexColumnCenter;
+    }
 
     p {
         font-size: 1.5rem;

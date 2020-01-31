@@ -60,13 +60,13 @@
 
     &--nav {
         background-color: $color-black;
-        position: absolute;
+        position: fixed;
         top: 12vh;
         right: 0;
-        width: 70%;
-        z-index: 10;
+        width: 100%;
         transition: all 0.2s ease-in;
         transform: translateX(100%);
+        z-index: 10;
 
         @media screen and (min-width: 52.43em) {
             position: unset;
@@ -86,14 +86,14 @@
         align-items: center;
         flex-direction: column;
         height: 88vh;
+        list-style: none;
 
         a {
             text-decoration: none;
             color: $color-grey-light;
-            font-size: 1.4rem;
+            font-size: 2rem;
 
             @media screen and (min-width: 52.43em) {
-                font-size: 1.8rem;
                 padding: 0 1rem;
             }
 
@@ -111,7 +111,6 @@
         transform: translateX(0);
     }
 
-    // Avoid body scroll when user clicks burger nav
     .body-toggle {
         overflow: hidden;
     }
