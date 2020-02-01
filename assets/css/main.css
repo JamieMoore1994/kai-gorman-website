@@ -1030,3 +1030,156 @@ p, a, ul, span {
       @media screen and (min-width: 53em) {
         .qualifications__list .btn {
           font-size: 2rem; } }
+
+.training {
+  margin-bottom: 5rem; }
+  .training__intro {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .training__intro p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem; }
+    .training__intro .btn {
+      margin-bottom: 2rem; }
+
+.workshops {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  background-color: #000000; }
+  .workshops__intro {
+    padding: 0 2rem;
+    font-size: 1.5rem; }
+  .workshops__learn {
+    padding: 2rem;
+    margin-top: 1.5rem; }
+  .workshops__titles {
+    color: #7BB374;
+    font-size: 2rem; }
+  .workshops__list {
+    padding: 1.7rem 2rem;
+    font-size: 1.5rem; }
+    .workshops__list li {
+      padding: .8rem 0; }
+  .workshops__price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    position: relative; }
+    .workshops__price--amount {
+      color: #7BB374;
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 1.2rem; }
+      @media screen and (min-width: 25em) {
+        .workshops__price--amount {
+          font-size: 2.5rem; } }
+      @media screen and (min-width: 25em) {
+        .workshops__price--amount {
+          font-size: 3rem; } }
+      .workshops__price--amount::before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 3%;
+        height: .2rem;
+        width: 1.5rem;
+        background-color: #7BB374; }
+        @media screen and (min-width: 25em) {
+          .workshops__price--amount::before {
+            top: 13%;
+            left: 4%;
+            height: .3rem;
+            width: 2rem; } }
+      .workshops__price--amount::after {
+        content: '';
+        position: absolute;
+        top: 10%;
+        right: 3%;
+        height: .2rem;
+        width: 1.5rem;
+        background-color: #7BB374; }
+        @media screen and (min-width: 25em) {
+          .workshops__price--amount::after {
+            top: 13%;
+            right: 4%;
+            height: .3rem;
+            width: 2rem; } }
+    .workshops__price p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem; }
+  .workshops__examples figure {
+    margin-bottom: 3rem; }
+  @media screen and (min-width: 28.25em) {
+    .workshops__examples {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
+  @media screen and (min-width: 28.25em) {
+    .workshops__examples--one {
+      margin-right: 1.5rem; } }
+  .workshops__groups {
+    padding: 2rem; }
+  .workshops__classes p {
+    margin: 1rem 0 2rem 0;
+    font-size: 1.5rem; }
+
+.specialties__description {
+  padding: 2rem; }
+  .specialties__description ul {
+    list-style: none; }
+
+.specialties__titles {
+  color: #2D5028;
+  font-size: 1.9rem;
+  margin: .5rem 0; }
+
+.specialties p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem; }
+
+.personal__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 4rem; }
+  .personal__social .svg-content {
+    fill: #2D5028;
+    height: 10rem;
+    width: 10rem; }

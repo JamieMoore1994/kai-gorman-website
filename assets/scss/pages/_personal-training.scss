@@ -1,0 +1,183 @@
+//-------Intro programs section------//
+.training {
+    margin-bottom: 5rem;
+
+
+
+    &__intro {
+        padding: 2rem;
+        @include flexColumnCenter;
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+//-----Workshops Section-------//
+.workshops {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    background-color: $color-black;
+
+    &__intro {
+        padding: 0 2rem;
+        font-size: 1.5rem;
+    }
+
+    &__learn {
+        padding: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    &__titles {
+        color: $color-green-light;
+        font-size: 2rem;
+    }
+
+    &__list {
+        padding: 1.7rem 2rem;
+        font-size: 1.5rem;
+
+        li {
+            padding: .8rem 0;
+        }
+    }
+
+    &__price {
+        @include flexColumnCenter;
+        margin-bottom: 4rem;
+        position: relative;
+
+        // This is all for the pricing of the workshops
+        &--amount {
+            color: $color-green-light;
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+
+            @media screen and (min-width: 25em) {
+                font-size: 2.5rem;
+            }
+
+            @media screen and (min-width: 25em) {
+                font-size: 3rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10%;
+                left: 3%;
+                height: .2rem;
+                width: 1.5rem;
+                background-color: $color-green-light;
+
+                @media screen and (min-width: 25em) {
+                    top: 13%;
+                    left: 4%;
+                    height: .3rem;
+                    width: 2rem;
+                }
+
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 10%;
+                right: 3%;
+                height: .2rem;
+                width: 1.5rem;
+                background-color: $color-green-light;
+
+                @media screen and (min-width: 25em) {
+                    top: 13%;
+                    right: 4%;
+                    height: .3rem;
+                    width: 2rem;
+                }
+            }
+
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    // Client training examples
+    &__examples {
+        
+        figure {
+            margin-bottom: 3rem;
+        }
+
+        @media screen and (min-width: 28.25em) {
+            @include flexAround;
+        }
+
+        &--one {
+            @media screen and (min-width: 28.25em) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    // Group classes section
+    &__groups {
+        padding: 2rem;
+    }
+
+    &__classes {
+        p {
+            margin: 1rem 0 2rem 0;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+//-----Specialties Section-------//
+.specialties {
+
+    &__description {
+        padding: 2rem;
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    &__titles {
+        color: $color-green-main;
+        font-size: 1.9rem;
+        margin: .5rem 0;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;;
+    }
+}
+
+//-----Social Section-------//
+.personal__social {
+    @include flexColumnCenter;
+    margin-bottom: 4rem;
+
+    .svg-content {
+        fill: $color-green-main;
+        height: 10rem;
+        width: 10rem;
+    }
+}
+
+
