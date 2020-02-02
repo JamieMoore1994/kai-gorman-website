@@ -59,17 +59,19 @@
         <!--Training intro-->
         <section class="training">
             <div class="training__container">
+
                 <div class="training__intro">
                     <h2 class="main__titles">Want to achieve the best results you can with me?</h2>
                     <p class="text-grey-body">I run twelve week programs that help you achieve the best results you possibly can and all being tailored towards your goals.</p>
                     <a href="programs.html" class="btn btn-dark">View program prices</a>
                 </div>
 
-                <div class="training__image">
-                    <figure>
+                <div class="training__img">
+                    <figure class = "training__img--figure">
                         <img src="assets/img/kai-friendly-image.jpg" alt="Image of kai smiling">
                     </figure>
                 </div>
+            </div>
         </section>
 
         <!--Workshops section-->
@@ -131,7 +133,15 @@
                 <div class="workshops__classes">
                     <h3 class="workshops__titles">Group Classes</h3>
                     <p class="text-grey-light">Or if you have a group of six or more of you and you all fancy a fitness class together for a cheap price, then get in touch to book a group class together.</p>
+
                     <a href="contact.html" class="btn btn-light">Book a class</a>
+                </div>
+
+                <div class="workshops__videos">
+                    <video controls>
+                        <source src = "assets/video/kai-group-class-optimised.mp4" type = video/mp4>
+                    </video>
+                    <p class="workshops__videos--caption">Video from one of my group classes</p>
                 </div>
             </div>
             </div>
@@ -144,6 +154,10 @@
                 
                 <figure class="specialties__img">
                     <img src="assets/img/kai-progress.jpg" alt="Kai body progression picture">
+
+                    <figcaption class="specialties__img--caption">
+                        My progress of losing body fat from 2019.
+                    </figcaption>
                 </figure>
 
                 <div class="specialties__description">
@@ -173,12 +187,14 @@
         <section class="personal__social">
             <h2 class="main__titles">I'm most active on social media, follow me for useful content</h2>
 
-            <svg aria-labelledby="instagram-content"
-            role = "presentation"
-            class = "svg-content">
-            <title id = "instagram-content">Instagram icon to follow Kai Gorman</title>
-                <use xlink:href = "assets/svg/sprite.svg#icon-instagram"></use>
-            </svg>
+            <a href = "https://www.instagram.com/kaigormantrainer/?hl=en" title = "Kai Gorman instagram" class = "svg-content-hover">
+                <svg aria-labelledby="instagram-content"
+                role = "presentation"
+                class = "svg-content">
+                <title id = "instagram-content">Instagram icon to follow Kai Gorman</title>
+                    <use xlink:href = "assets/svg/sprite.svg#icon-instagram"></use>
+                </svg>
+            </a>
         </section>
     </main>
 
@@ -192,7 +208,7 @@
                 <a href = "index.html" title = "Home page">
                     <img src="assets/img/kai-logo.png" alt="Kai Gorman business logo">
                 </a>
-                <a href="https://www.instagram.com/kaigormantrainer/?hl=en" class="master__footer--instagram" title = "Kai Gorman instagram">
+                <a href="https://www.instagram.com/kaigormantrainer/?hl=en" title = "Kai Gorman instagram">
                      <svg aria-labelledby="Instagram"
                      role = "presentation" class="master__footer--instagram">
                      <title id = "Instagram" lang = "en">Follow Kai Gorman on Instagram</title>

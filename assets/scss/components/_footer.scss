@@ -40,13 +40,16 @@
 
     &--instagram {
         fill: $color-white;
-        height: 4rem;
-        width: 4rem;
+        background-color: $color-green-main;
+        height: 5rem;
+        width: 5rem;
         margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
         transition: all 200ms ease-in;
 
         &:hover, &:focus {
-            fill: $color-grey-dark;
+            background-color: $color-green-light;
             transform: translateY(-.3rem);
         }
     }
