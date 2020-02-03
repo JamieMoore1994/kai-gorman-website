@@ -88,65 +88,115 @@
     background-color: $color-black;
     position: relative;
 
+    &__container {
+        position: relative;
+        @include flexColumnCenter;
+
+        @media screen and (min-width: 37.5em) {
+            @include maxWidth;
+        }
+    }
+
     &__intro {
         padding: 0 2rem;
         font-size: 1.5rem;
+
+        @media screen and (min-width: 37.5em) {
+            p {
+                max-width: 65ch;
+                font-size: 1.8rem;
+                margin-left: auto;
+            }
+        }
     }
 
     &__learn {
         padding: 2rem;
         margin-top: 1.5rem;
-    }
 
-    &__titles {
-        color: $color-green-light;
-        font-size: 2rem;
-    }
-
-    &__list {
-        padding: 1.7rem 2rem;
-        font-size: 1.5rem;
-
-        li {
-            padding: .8rem 0;
+        @media screen and (min-width: 37.5em) {
+            @include flexAroundStart;
         }
     }
 
+    &__titles {
+        color: $color-grey-dark;
+        font-size: 2rem;
+    }
+
+    &__titles.green {
+        color: $color-green-light;
+    }
+
+    &__list {
+        padding: 0.3rem 2rem 1.7rem 2rem;
+
+        li {
+            padding: .8rem 0;
+            font-size: 1.5rem;
+
+            @media screen and (min-width: 51.87em) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    // Price for the workshop section
     &__price {
         @include flexColumnCenter;
         margin-bottom: 4rem;
         position: relative;
 
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: .1rem;
+            width: 100%;
+            background-color: $color-green-light;
+        }
+
         // This is all for the pricing of the workshops
         &--amount {
             color: $color-green-light;
-            font-size: 2.2rem;
+            font-size: 1.6rem;
             font-weight: 900;
             text-align: center;
             line-height: 1.2;
             margin-bottom: 1.2rem;
 
             @media screen and (min-width: 25em) {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
-            @media screen and (min-width: 25em) {
+            @media screen and (min-width: 32em) {
                 font-size: 3rem;
+            }
+
+            @media screen and (min-width: 50em) {
+                font-size: 4.5rem;
             }
 
             &::before {
                 content: '';
                 position: absolute;
-                top: 10%;
-                left: 3%;
+                top: 5%;
+                left: 2%;
                 height: .2rem;
-                width: 1.5rem;
+                width: .5rem;
                 background-color: $color-green-light;
 
                 @media screen and (min-width: 25em) {
-                    top: 13%;
-                    left: 4%;
+                    top: 10%;
+                    left: -7%;
                     height: .3rem;
+                    width: 1rem;
+                }
+
+                @media screen and (min-width: 50em) {
+                    top: 15%;
+                    height: .5rem;
                     width: 2rem;
                 }
 
@@ -155,16 +205,22 @@
             &::after {
                 content: '';
                 position: absolute;
-                top: 10%;
-                right: 3%;
+                top: 5%;
+                right: 2%;
                 height: .2rem;
-                width: 1.5rem;
+                width: .5rem;
                 background-color: $color-green-light;
 
                 @media screen and (min-width: 25em) {
-                    top: 13%;
-                    right: 4%;
+                    top: 10%;
+                    right: -7%;
                     height: .3rem;
+                    width: 1rem;
+                }
+
+                @media screen and (min-width: 50em) {
+                    top: 15%;
+                    height: .5rem;
                     width: 2rem;
                 }
             }
@@ -174,69 +230,219 @@
         p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
+
+            @media screen and (min-width: 50em) {
+                font-size: 1.8rem;
+            }
+        }
+        .btn {
+            margin-bottom: 5rem;
+
+            @media screen and (min-width: 50em) {
+                font-size: 2rem;
+            }
         }
     }
 
-    // Client training examples
-    &__examples {
-        position: relative;
+    // This is for all videos on the page
+    video {
+        border-radius: 1rem;
+        box-shadow: .8rem -0.4rem 1.78rem 0 rgba(45,80,40,.6);
+    }
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            height: .1rem;
-            width: 80%;
-            background-color: $color-green-light;
+    &__examples {
+        padding: 0 2rem;
+        margin: 0 2rem;
+
+        @media screen and (min-width: 37.5em) {
+            padding: 0;
+            margin: 0;
+            @include flexBetween;
         }
         
-        figure {
-            margin-bottom: 3rem;
-        }
 
-        @media screen and (min-width: 28.25em) {
-            @include flexAround;
-        }
+        &--videos {
+            margin-top: 3rem;
 
-        &--one {
-            @media screen and (min-width: 28.25em) {
-                margin-right: 1.5rem;
+            @media screen and (min-width: 37.5em) {
+                margin-bottom: 2rem;
+                padding: 0 2rem;
             }
+
+            @media screen and (min-width: 55em) {
+                padding: 0 5rem;
+            }
+
+            @media screen and (min-width: 62em) {
+                padding: 0 12rem;
+            }
+        }
+
+        // This is the code for the images incase I put them back in instead of the videos
+        // position: relative;
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        //     height: .1rem;
+        //     width: 80%;
+        //     background-color: $color-green-light;
+        // }
+        
+        // figure {
+        //     margin-bottom: 3rem;
+        // }
+
+        // @media screen and (min-width: 28.25em) {
+        //     @include flexAround;
+        // }
+
+        // &--one {
+        //     @media screen and (min-width: 28.25em) {
+        //         margin-right: 1.5rem;
+        //     }
+        // }
+    }
+
+    // Video caption
+    .video-caption {
+        color: $color-grey-dark;
+        font-size: 1.3rem;
+        font-style: italic;
+        margin: 1rem 0 2rem 0;
+
+        @media screen and (min-width: 55em) {
+            font-size: 1.5rem;
         }
     }
 
     // Group classes section
     &__groups {
-        margin-top: 2rem;
-        padding: 2rem;
+        padding: 0 2rem;
         @include flexColumnStart;
+
+        @media screen and (min-width: 38.43em) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+        }
     }
 
     &__classes {
+        @include flexColumnStart;
+
         p {
             margin: 1rem 0 2rem 0;
             font-size: 1.5rem;
+        }
+
+        @media screen and (min-width: 38.43em) {
+            @include flexColumnStart;
+
+            p {
+                max-width: 65ch;
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__class {
+        position: relative;
+        margin: 2rem 1.2rem;
+        // This is all for the pricing of the workshops
+        &--amount {
+            color: $color-green-light;
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+
+            @media screen and (min-width: 25em) {
+                font-size: 1.8rem;
+            }
+
+            @media screen and (min-width: 60em) {
+                font-size: 3.5rem;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -8%;
+                height: .2rem;
+                width: .5rem;
+                background-color: #7bb374;
+
+                @media screen and (min-width: 25em) {
+                    top: 45%;
+                    height: .3rem;
+                    width: 1rem;
+                }
+
+                @media screen and (min-width: 60em) {
+                    height: .5rem;
+                    width: 1.5rem;
+                }
+
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -8%;
+                height: .2rem;
+                width: .5rem;
+                background-color: #7bb374;
+
+                @media screen and (min-width: 25em) {
+                    top: 45%;
+                    height: .3rem;
+                    width: 1rem;
+                }
+
+                @media screen and (min-width: 60em) {
+                    height: .5rem;
+                    width: 1.5rem;
+                }
+            }
         }
     }
 
     &__videos {
         margin: 3rem 0;
-
-        &--caption {
-            color: $color-grey-dark;
-            font-size: 1.3rem;
-            font-style: italic;
-        }
     }
 }
 
 //-----Specialties Section-------//
 .specialties {
     margin-top: 4rem;
+    position: relative;
+
+    &__container {
+        margin-top: 5rem;
+
+        @media screen and (min-width: 45em) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
     &__img {
+        position: relative;
+
+        img {
+            display: block;
+        }
 
         &--caption {
             color: $color-green-main;
@@ -246,30 +452,44 @@
         }
     }
 
+    &__titles {
+        color: $color-green-main;
+        font-size: 1.9rem;
+        margin: .5rem 0;
+
+        @media screen and (min-width: 60em) {
+            font-size: 2.2rem;
+        }
+    }
+
     &__description {
         padding: 1rem 2rem;
 
         ul {
             list-style: none;
+
+            p {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+
+                @media screen and (min-width: 60em) {
+                    font-size: 1.8rem;
+                    margin-bottom: 3rem;
+                }
+            }
         }
     }
 
-    &__titles {
-        color: $color-green-main;
-        font-size: 1.9rem;
-        margin: .5rem 0;
-    }
-
-    p {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;;
-    }
 }
 
 //-----Social Section-------//
 .personal__social {
     @include flexColumnCenter;
     margin-bottom: 4rem;
+
+    h2 {
+        max-width: 30ch;
+    }
 
     .svg-content {
         background-color: $color-green-main;
