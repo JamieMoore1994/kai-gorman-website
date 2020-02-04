@@ -324,7 +324,7 @@
         padding: 0 2rem;
         @include flexColumnStart;
 
-        @media screen and (min-width: 38.43em) {
+        @media screen and (min-width: 42em) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 2rem;

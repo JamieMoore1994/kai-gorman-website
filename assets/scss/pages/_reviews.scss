@@ -1,0 +1,165 @@
+.reviews {
+    p {
+        font-size: 1.5rem;
+        padding: 0 2rem;
+    }
+
+    &__container {
+
+    }
+
+    // Before and after images section
+    &__testimonial {
+        margin: 4rem 0;
+        padding-bottom: 2rem;
+        position: relative;
+
+        &--text {
+            position: relative;
+
+            &::before {
+                content: open-quote;
+                position: absolute;
+                top: -22%;
+                left: 0;
+                font-size: 10rem;
+                color: $color-green-light;
+
+                @media screen and (min-width: 23.12em) {
+                    top: -30%;
+                }
+
+                @media screen and (min-width: 31.25em) {
+                    top: -35%;
+                }
+           }
+
+           &::after {
+                content: close-quote;
+                position: absolute;
+                bottom: -10%;
+                right: 1%;
+                font-size: 10rem;
+                color: $color-green-light;
+
+                @media screen and (min-width: 31.25em) {
+                    bottom: -15%;
+                }
+           }
+
+            p {
+                margin-top: 5rem;
+            }
+            
+        }
+    }
+
+    &__name {
+        display: block;
+        font-size: 1.8rem;
+        color: $color-green-main;
+        padding: 2rem;
+    }
+}
+
+// Other reviews section
+.testimonials {
+    background-color: $color-black;
+    padding: 2rem;
+
+    &__container {
+
+    }
+
+    &__items {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        margin: 2rem 0;
+        @include flexColumnStart;
+
+        .review-icon {
+            fill: $color-green-light;
+            height: 10rem;
+            width: 10rem;
+            margin-bottom: 5rem;
+        }
+
+        &--text {
+            background-color: $color-white;
+            padding: 3rem;
+            border-radius: 1rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -4%;
+                left: 5%;
+                border-left: 4rem solid transparent;
+                border-right: 4rem solid transparent;
+                border-bottom: 4rem solid $color-white;
+                transform: rotate(-15deg);
+
+                @media screen and (min-width: 27.5em) {
+                    top: -6%;
+                }
+            } 
+        }
+
+        &--name {
+            font-size: 1.8rem;
+            color: $color-green-main;
+            margin: 2rem 0 1rem 0;
+            z-index: 2;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // Adjusting each arrow to ensure they are similar to each other
+    &__items {
+
+        li:nth-of-type(2) {
+            .testimonials__item--text::before {
+                top: -5%;
+
+                @media screen and (min-width: 27.5em) {
+                    top: -7%;
+                }
+            }
+        }
+    }
+
+    &__items {
+
+        li:nth-of-type(3) {
+            .testimonials__item--text::before {
+                top: -14%;
+
+                @media screen and (min-width: 27.5em) {
+                    top: -16%;
+                }
+            }
+        }
+    }
+
+    &__items {
+
+        li:nth-of-type(4) {
+            .testimonials__item--text::before {
+                top: -7%;
+
+                @media screen and (min-width: 27.5em) {
+                    top: -10%;
+                }
+            }
+        }
+    }
+}
