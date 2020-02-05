@@ -1,0 +1,132 @@
+.contact {
+    &__intro {
+        margin: 4rem 0;
+        @include flexColumnCenter;
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 4rem;
+            padding: 0 2rem;
+            max-width: 70ch;
+
+            @media screen and (min-width: 45.62em) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__container {
+        background-color: $color-black;
+        @media screen and (min-width: 45.62em) {
+            @include flexAround;
+        }
+    }
+
+    &__form--container {
+        padding: 2rem;
+        @media screen and (min-width: 45.62em) {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+    &__form {
+        @include flexColumnStart;
+
+        .btn {
+            margin-top: 1rem;
+            padding: 1rem 6rem;
+        }
+    }
+
+    &__label--container {
+        @include flexColumnStart;
+        margin: 2rem 0;
+    }
+
+    &__label {
+        color: $color-green-light;
+        font-weight: 900;
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+    &__input {
+        background-color: transparent;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: .1rem solid $color-green-light;
+        width: 80vw;
+        color: $color-grey-light;
+        font-size: 1.5rem;
+
+        &::placeholder {
+            font-size: 1.3rem;
+        }
+
+        @media screen and (min-width: 45.62em) {
+            width: 40vw;
+        }
+    }
+
+    &__textarea {
+        background-color: transparent;
+        border: .1rem solid $color-green-main;
+        width: 80vw;
+        padding: .5rem;
+
+        &::placeholder {
+            font-size: 1.3rem;
+        }
+
+        @media screen and (min-width: 45.62em) {
+            width: 40vw;
+        }
+    }
+
+    &__img {
+        img {
+            display: block;
+        }
+
+        @media screen and (min-width: 45.62em) {
+            align-self: flex-end;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.details {
+    margin: 3rem 0;
+    @include flexColumnCenter;
+    position: relative;
+
+    &__list {
+        list-style: none;
+        @include flexColumnCenter;
+        margin-bottom: 2rem;
+
+        li {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            text-align: center;
+
+            @media screen and (min-width: 45.62em) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: .1rem;
+            background-color: $color-green-main;
+        }
+    }
+}
