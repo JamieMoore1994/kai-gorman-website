@@ -55,6 +55,11 @@
     margin: 0 auto;
 }
 
+@mixin maxWidthExtraLarge {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
 
 //------Box shadow------//
 @mixin boxShadow {

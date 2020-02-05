@@ -6,7 +6,7 @@
     padding: 3rem 2rem 0 2rem;
 
     &--container {
-        @media screen and (min-width: 48.75em) {
+        @media screen and (min-width: 44.75em) {
             @include maxWidth;
             display: flex;
             justify-content: space-around;
@@ -18,7 +18,7 @@
         @include flexColumnStart;
         margin: 2rem 0;
 
-        @media screen and (min-width: 48.75em) {
+        @media screen and (min-width: 46.75em) {
             flex: 0 0 50vw;
 
         }
@@ -26,7 +26,7 @@
         .btn {
             margin-top: 1.5rem;
             font-size: 2.5rem;
-            @media screen and (min-width: 48.75em) {
+            @media screen and (min-width: 46.75em) {
                 font-size: 2.8rem;
             }
         }
@@ -40,7 +40,7 @@
         line-height: 1.2;
         margin: .5rem 0;
 
-        @media screen and (min-width: 48.75em) {
+        @media screen and (min-width: 46.75em) {
             font-size: 3.6rem;
         }
 
@@ -69,8 +69,11 @@
     }
 
     &--image {
-        @include flexCentre;
         margin-top: 2rem;
+
+        img {
+            display: block;
+        }
     }
 
 }

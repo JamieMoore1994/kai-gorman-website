@@ -40,7 +40,7 @@
 
     <!--Main banner intro section-->
     <section class="page__header">
-        <div class="page__header--container main-container">
+        <div class="page__header--container">
 
             <div class="page__header--wrapper">
                 <h1 class="page__header--titles">Reviews</h1>
@@ -48,24 +48,34 @@
                 <a href="contact.html" class="btn btn-light" title = "Go to personal training page">Book a consultation</a>
             </div>
 
-            <div class="page__header--image">
+            <!-- <div class="page__header--image">
                 <img src="assets/img/kai-training-small.jpg" alt="Image of Kai Gorman" class="page__img">
+            </div> -->
+
+            <div class="page__header--image">
+                <picture>
+                    <source media = "(max-width: 549px)" srcset="assets/img/kai-header-sub-pages-small.png" class="page__img">
+                    <source media = "(min-width: 550px)" srcset="assets/img/kai-header-sub-pages.png" class="page__img">
+                    <img src="assets/img/kai-header-sub-pages.png" alt="Image of Kai Gorman">
+                </picture>
             </div>
         </div>
     </section>
 
     <main id = "content">
         <section class="reviews">
-            <h2 class="main__titles">Testimonials</h2>
-            <p class="text-grey-body">Below is just a few of the many clients that have achieved amazing results either through my program plans or attending my workshops. Get in touch and let me help you get amazing results.</p>
-
-            <div class="reviews__container">
+            <div class="reviews__intro">
+                <h2 class="main__titles">Testimonials</h2>
+                <p class="text-grey-body">Below is just a few of the many clients that have achieved amazing results either through my program plans or attending my workshops. Get in touch and let me help you get amazing results.</p>
+            </div>
 
                 <!--Testimonial card one-->
                 <div class="reviews__testimonial">
-                    <figure class="reviews__testimonial--img">
-                        <img src="assets/img/flavio-review.jpg" alt="Body transformation image">
-                    </figure>
+                    <div class="reviews__testimonial--img">
+                        <figure>
+                            <img src="assets/img/flavio-review.jpg" alt="Body transformation image">
+                        </figure>
+                    </div>
 
                     <div class="reviews__testimonial--text">
                         <p class="text-grey-body">Can’t thank and recommend Kai’s sessions enough for all his help as a PT. Excellent knowledge in nutrition/training, I’m noticing so many changes and improvements since I’ve started training with you! Great guy and definitely keeps you motivated for the next session and focused on your goals.</p>
@@ -76,9 +86,11 @@
 
                 <!--Testimonial card two-->
                 <div class="reviews__testimonial">
-                    <figure class="reviews__testimonial--img">
-                        <img src="assets/img/ching-review.jpg" alt="Body transformation image">
-                    </figure>
+                    <div class="reviews__testimonial--img">
+                        <figure>
+                            <img src="assets/img/ching-review.jpg" alt="Body transformation image">
+                        </figure>
+                    </div>
 
                     <div class="reviews__testimonial--text">
                         <p class="text-grey-body">I absolutely enjoyed every session with Kai. He is very friendly and motivating. I’ve noticed a huge improvement in my overall fitness and strength in just 8 weeks. Couldn’t recommend this more!!</p>
@@ -89,9 +101,11 @@
 
                 <!--Testimonial card three-->
                 <div class="reviews__testimonial">
-                    <figure class="reviews__testimonial--img">
-                        <img src="assets/img/daniel-review.jpg" alt="Body transformation image">
-                    </figure>
+                    <div class="reviews__testimonial--img">
+                        <figure>
+                            <img src="assets/img/daniel-review.jpg" alt="Body transformation image">
+                        </figure>
+                    </div>
 
                     <div class="reviews__testimonial--text">
                         <p class="text-grey-body">I absolutely enjoyed every session with Kai. He is very friendly and motivating. I’ve noticed a huge improvement in my overall fitness and strength in just 8 weeks. Couldn’t recommend this more!!</p>
@@ -99,14 +113,13 @@
                         <span class="reviews__name">Daniel Victory</span>
                     </div>
                 </div>
-            </div>
         </section>
 
+        <!--Testimonials without images-->
         <section class="testimonials">
             <h2 class="main__titles title__light">Have a look at some more client reviews of me</h2>
-            <div class="testimonials__container">
-                <ul class="testimonials__items">
 
+                <ul class="testimonials__items">
                     <!--Review one-->
                     <li class="testimonials__item">
                         <div class="testimonials__item--icon">
@@ -150,23 +163,6 @@
                                 role = "presentation"
                                 class = "review-icon">
                             <title id = "review-three">An icon showing a male stick figure</title>
-                                <use xlink:href = "assets/svg/sprite.svg#icon-man"></use>
-                            </svg>
-                        </div>
-
-                        <div class="testimonials__item--text">
-                            <h3 class="testimonials__item--name">Ian Phang</h3>
-                            <p class="text-grey-body">One of the best PT in the world. Highly recommend!</p>
-                        </div>
-                    </li>
-
-                    <!--Review four-->
-                    <li class="testimonials__item">
-                        <div class="testimonials__item--icon">
-                            <svg aria-labelledby="review-four"
-                                role = "presentation"
-                                class = "review-icon">
-                            <title id = "review-three">An icon showing a male stick figure</title>
                                 <use xlink:href = "assets/svg/sprite.svg#icon-woman"></use>
                             </svg>
                         </div>
@@ -176,8 +172,24 @@
                             <p class="text-grey-body">So happy with my progress, Kai has really helped me on the road to achieving my fitness goals. Coming to the end of my 12-week programme and going back for another. I wanted to get stronger, build muscle and learn to lift safely… Kai knows his stuff.</p>
                         </div>
                     </li>
+
+                    <!--Review four-->
+                    <li class="testimonials__item">
+                        <div class="testimonials__item--icon">
+                            <svg aria-labelledby="review-four"
+                                role = "presentation"
+                                class = "review-icon">
+                            <title id = "review-four">An icon showing a male stick figure</title>
+                                <use xlink:href = "assets/svg/sprite.svg#icon-man"></use>
+                            </svg>
+                        </div>
+
+                        <div class="testimonials__item--text">
+                            <h3 class="testimonials__item--name">Ian Phang</h3>
+                            <p class="text-grey-body">One of the best PT in the world. Highly recommend!</p>
+                        </div>
+                    </li>
                 </ul>
-            </div>
         </section>
 
         <!--Social media link-->
