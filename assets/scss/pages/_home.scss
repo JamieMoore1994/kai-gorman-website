@@ -70,7 +70,6 @@
 
     &--image {
         margin-top: 2rem;
-
         img {
             display: block;
         }
@@ -145,6 +144,78 @@
         width: 20rem;
         fill: $color-green-main;
         margin: 1.4rem 0;
+    }
+}
+
+/*-----------------------------
+    Choose Kai section
+-----------------------------*/
+
+.choose {
+    padding: 5rem 0;
+    position: relative;
+
+    .main__titles {
+        margin-bottom: 3rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: .1rem;
+        width: 50%;
+        background-color: $color-green-light;
+        transform: translateX(50%);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 44.5em) {
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__img--item {
+        clip-path: polygon(0% 0%, 100% 0, 100% 73%, 50% 100%, 0 77%);
+
+        @media screen and (min-width: 44.5em) {
+            clip-path: polygon(0% 0%, 76% 0, 100% 50%, 81% 100%, 0% 100%);
+        }
+    }
+
+    &__list--section {
+        padding: 0 4rem;
+        margin: 2rem 0;
+
+        a {
+            @media screen and (min-width: 57em) {
+                font-size: 2rem;
+            }
+        }
+    }
+    &__list {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        @include flexColumnStart;
+
+        @media screen and (min-width: 57em) {
+            font-size: 2rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+
+            @media screen and (min-width: 57em) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
     }
 }
 
@@ -277,77 +348,6 @@
 
     }
 
-}
-/*-----------------------------
-    Choose Kai section
------------------------------*/
-
-.choose {
-    padding: 5rem 0;
-    position: relative;
-
-    .main__titles {
-        margin-bottom: 3rem;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: .1rem;
-        width: 50%;
-        background-color: $color-green-light;
-        transform: translateX(50%);
-    }
-
-    &__container {
-        display: flex;
-        flex-direction: column;
-
-        @media screen and (min-width: 44.5em) {
-            margin-top: 5rem;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    &__img--item {
-        clip-path: polygon(0% 0%, 100% 0, 100% 73%, 50% 100%, 0 77%);
-
-        @media screen and (min-width: 44.5em) {
-            clip-path: polygon(0% 0%, 76% 0, 100% 50%, 81% 100%, 0% 100%);
-        }
-    }
-
-    &__list--section {
-        padding: 0 4rem;
-        margin: 2rem 0;
-
-        a {
-            @media screen and (min-width: 57em) {
-                font-size: 2rem;
-            }
-        }
-    }
-    &__list {
-        margin-bottom: 3rem;
-        font-size: 1.5rem;
-        @include flexColumnStart;
-
-        @media screen and (min-width: 57em) {
-            font-size: 2rem;
-        }
-
-        li {
-            margin-bottom: .5rem;
-
-            @media screen and (min-width: 57em) {
-                margin-bottom: 1rem;
-            }
-        }
-
-    }
 }
 
 /*-----------------------------

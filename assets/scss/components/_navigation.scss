@@ -75,7 +75,7 @@
             width: 70%;
         }
 
-        @media screen and (min-width: 56.87em) {
+        @media screen and (min-width: 70em) {
             width: 60%;
         }
     }
@@ -91,6 +91,7 @@
 
         li {
             padding: 3rem 0;
+            position: relative;
 
             @media screen and (min-width: 52.43em) {
                 padding: 0;
@@ -99,20 +100,57 @@
 
         a {
             text-decoration: none;
+            text-transform: uppercase;
             color: $color-grey-light;
-            font-size: 2rem;
+            font-size: 1.8rem;
+            transition: all 200ms ease-in;
 
-            @media screen and (min-width: 52.43em) {
-                padding: 0 1rem;
+            &:hover, &:focus {
+                color: $color-green-light;
             }
 
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform-origin: bottom right;
+                height: .2rem;
+                border-radius: .2rem;
+                width: 100%;
+                background-color: $color-green-light;
+                transform: scale(0);
+                transition: transform 300ms ease-in-out;
+            }
+
+            &:hover::after, &:focus::after {
+                transform-origin: bottom left;
+                transform: scale(1);
+            }
+
+            @media screen and (min-width: 56.87em) {
+                font-size: 2rem;
+            }
         }
 
         @media screen and (min-width: 52.43em) {
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
             height: unset;
         }
+
+        .active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: .2rem;
+            border-radius: .2rem;
+            width: 100%;
+            background-color: $color-green-light;
+            transform: unset;
+        }
+
     }
 
     // Target with javascript

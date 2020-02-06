@@ -1,0 +1,265 @@
+.introduction {
+    margin: 2rem 0;
+    &__container {
+        @include flexColumnCenter;
+
+        @media screen and (min-width: 36.87em) {
+            @include maxWidthLarge;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 2rem;
+            justify-items: center;
+        }
+    }
+
+    &__intro {
+        padding: 2rem;
+
+        @media screen and (min-width: 36.87em) {
+            .main__titles {
+                margin-top: 0;
+                padding-top: 0;
+            }
+
+            align-self: start;
+        }
+
+        p {
+            margin: 1.5rem 0;
+            font-size: 1.5rem;
+
+            @media screen and (min-width: 36.87em) {
+                font-size: 1.8rem;
+                max-width: 65ch;
+                margin: 2rem 0;
+            }
+        }
+    }
+}
+
+.pricing {
+
+    // Adding background colours to each section and changing the colours of the arrows
+    &__section.bronze {
+        background-color: $color-brown;
+
+        &::after {
+            border-top: 4rem solid $color-brown;
+        }
+    }
+
+    &__section.silver {
+        background-color: $color-silver;
+
+        &::after {
+            border-top: 4rem solid $color-silver;
+        }
+    }
+
+    &__section.gold {
+        background-color: $color-gold;
+    }
+
+    &__section {
+        margin: 6rem 0 8rem 0;
+        padding-bottom: 3rem;
+        position: relative;
+
+        &__section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        // The arrows at the bottom of the pricing sections
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0; 
+            height: 0;
+            border-left: 4rem solid transparent;
+            border-right: 4rem solid transparent;
+        }
+    }
+
+    // Fixing the over large margin on last pricing section due to extra margin needed for the arrows
+    &__section:last-of-type {
+        margin-bottom: 2rem;
+    }
+
+    &__container {
+        @include flexColumnCenter;
+        padding: 2rem 0;
+
+        @media screen and (min-width: 41.87em) {
+            @include maxWidthLarge;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+        }
+    }
+
+    &__package {
+        @include flexColumnCenter;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+
+        @media screen and (min-width: 41.87em) {
+            height: 100%;
+            justify-content: center;
+        }
+
+        &--title {
+            font-size: 3rem;
+
+            @media screen and (min-width: 31.25em) {
+                font-size: 5.5rem;
+                margin-bottom: 3rem;
+            }
+
+            @media screen and (min-width: 41.87em) {
+                font-size: 4rem;
+            }
+        }
+
+        span {
+            display: block;
+        }
+
+        &--price {
+            font-size: 4rem;
+            font-weight: 900;
+            position: relative;
+
+            @media screen and (min-width: 31.25em) {
+                font-size: 4.5rem;
+                margin-bottom: 3rem;
+            }
+
+            @media screen and (min-width: 41.87em) {
+                font-size: 6.5rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -30%;
+                top: 50%;
+                height: .2rem;
+                width: 2rem;
+                background-color: $color-grey-light;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -30%;
+                top: 50%;
+                height: .2rem;
+                width: 2rem;
+                background-color: $color-grey-light;
+            }
+        }
+
+        &--weekly {
+            font-size: 1.2rem;
+
+            @media screen and (min-width: 31.25em) {
+                font-size: 1.4rem;
+            }
+
+            @media screen and (min-width: 41.87em) {
+                font-size: 1.6rem;
+            }
+        }
+
+        // Grey line to seperate the packages from the included list
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: .1rem;
+            background-color: $color-grey-light;
+
+            @media screen and (min-width: 41.87em) {
+                width: .1rem;
+                height: 100%;
+                left: 100%;
+            }
+        }
+    }
+
+    // What is included list
+    &__information {
+        padding: 0 1rem;
+        @include flexColumnStart;
+
+        &--title {
+            font-size: 1.8rem;
+            color: $color-grey-light;
+            margin-bottom: 1rem;
+
+            @media screen and (min-width: 31.25em) {
+                margin-bottom: 0;
+            }
+        }
+
+        &--container {
+            display: flex;
+            align-items: center;
+
+            svg {
+                height: 1rem;
+                width: 1rem;
+                margin-right: 1rem;
+
+                @media screen and (min-width: 23.12em) {
+                    height: 1.4rem;
+                    width: 1.4rem;
+                    margin-right: 2rem;
+                }
+
+                @media screen and (min-width: 23.12em) {
+                    height: 1.6rem;
+                    width: 1.6rem;
+                }
+
+                @media screen and (min-width: 41.87em) {
+                    height: 2.2rem;
+                    width: 2.2rem;
+                }
+                
+            }
+        }
+
+        &--list {
+            list-style: none;
+
+            li {
+                font-size: 1.2rem;
+                margin: 1.5rem 0;
+
+                @media screen and (min-width: 23.12em) {
+                    font-size: 1.5rem;
+                }
+
+                @media screen and (min-width: 23.12em) {
+                    font-size: 1.8rem;
+                }
+
+                @media screen and (min-width: 41.87em) {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .btn {
+            margin: 1.5rem 0;
+            font-size: 2rem;
+        }
+    }
+}
