@@ -132,6 +132,17 @@
             }
         }
 
+        a {
+            transition: all 200ms ease-in;
+        }
+
+        li:nth-of-type(1) a:hover, li:nth-of-type(1) a:focus{
+            color: $color-grey-light;
+            background-color: $color-green-main;
+            padding: .2rem .5rem;
+            border-radius: 1rem;
+        }
+
         &::after {
             content: '';
             position: absolute;

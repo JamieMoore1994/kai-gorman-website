@@ -340,10 +340,14 @@ p, a, ul, span, figcaption, input, textarea {
     margin-bottom: 1rem; }
   .master__footer--list {
     list-style: none; }
+    .master__footer--list a {
+      color: #878787; }
     .master__footer--list li {
       margin: 1.2rem 0;
       font-size: 1.4rem;
       line-height: 1.15; }
+  .master__footer--list.mobile li:nth-of-type(1) a {
+    text-decoration: underline; }
   .master__footer .links:hover, .master__footer .links:focus {
     -webkit-transition: color 200ms ease-in;
     -o-transition: color 200ms ease-in;
@@ -1915,6 +1919,15 @@ p, a, ul, span, figcaption, input, textarea {
       @media screen and (min-width: 45.62em) {
         .details__list li {
           font-size: 1.8rem; } }
+    .details__list a {
+      -webkit-transition: all 200ms ease-in;
+      -o-transition: all 200ms ease-in;
+      transition: all 200ms ease-in; }
+    .details__list li:nth-of-type(1) a:hover, .details__list li:nth-of-type(1) a:focus {
+      color: #F2F2F2;
+      background-color: #2D5028;
+      padding: .2rem .5rem;
+      border-radius: 1rem; }
     .details__list::after {
       content: '';
       position: absolute;
