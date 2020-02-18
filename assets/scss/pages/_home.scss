@@ -4,6 +4,7 @@
 .page__header {
     background-color: $color-black;
     padding: 3rem 2rem 0 2rem;
+    visibility: hidden;
 
     &--container {
         display: flex;
@@ -21,6 +22,7 @@
     &--wrapper {
         @include flexColumnStart;
         margin: 2rem 0;
+        visibility: hidden;
 
         @media screen and (min-width: 46.75em) {
             flex: 0 0 50vw;
