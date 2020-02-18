@@ -16,7 +16,7 @@ responsiveNav();
 // Animating the navigation area
 function introScene() {
     var logo = document.querySelector('.logo');
-    var nav = document.querySelector(".master__header--links");
+    var nav = document.querySelector(".master__header--nav");
     var navLinks = document.querySelectorAll(".master__header--links li");
 
     var introWrapper = document.querySelector(".page__header--wrapper");
@@ -26,8 +26,8 @@ function introScene() {
     var tl = gsap.timeline({defaults:{opacity: 0}});
         tl.from(logo, {xPercent: -100});
         tl.from(nav, {}, "<")
-        tl.from(navLinks, {duration: 1, stagger: 0.1, ease: "bounce"}, "<")
-        tl.from(introWrapper, {xPercent: -100, ease: "back", duration: 1.5}, "-=1")
+        tl.from(navLinks, {duration: 1, stagger: 0.2, ease: "bounce"}, "<")
+        tl.from(introWrapper, {xPercent: -100, ease: "back", duration: 1.5}, "-=0.4")
         tl.from(bannerImg, {xPercent: 100, duration: 1}, "-=0.8");
 
 };
