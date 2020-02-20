@@ -69,6 +69,7 @@
         transition: all 0.2s ease-in;
         transform: translateX(100%);
         z-index: 10;
+        
 
         @media screen and (min-width: 52.43em) {
             position: unset;
@@ -90,6 +91,7 @@
         height: 88vh;
         list-style: none;
         padding: 2rem 0;
+        visibility: hidden;
 
         li {
             padding: 3rem 0;

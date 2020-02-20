@@ -1,4 +1,9 @@
 .contact {
+
+    @media screen and (min-width: 45.62em) {
+        @include maxWidth;
+    }
+
     &__intro {
         margin-top: 4rem;
         @include flexColumnCenter;
@@ -16,17 +21,18 @@
     }
 
     &__container {
-
         @media screen and (min-width: 45.62em) {
-            @include flexAround;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
         }
     }
 
     &__form--container {
         padding: 0 2rem;
-        @media screen and (min-width: 45.62em) {
-            max-width: 1000px;
-            margin: 0 auto;
+
+        @media screen and (min-width: 75em) {
+            padding: 0;
         }
     }
 

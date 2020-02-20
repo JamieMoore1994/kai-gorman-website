@@ -14,7 +14,7 @@
         @media screen and (min-width: 40.75em) {
             @include maxWidth;
             align-items: flex-start;
-            justify-content: space-around;
+            justify-content: space-between;
             flex-direction: row;
         }
     }
@@ -158,22 +158,10 @@
 -----------------------------*/
 
 .choose {
-    padding: 5rem 0;
-    position: relative;
+    padding: 5rem 0 0 0;
 
     .main__titles {
         margin-bottom: 3rem;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: .1rem;
-        width: 50%;
-        background-color: $color-green-light;
-        transform: translateX(50%);
     }
 
     &__container {
@@ -184,6 +172,13 @@
             margin-top: 5rem;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
+
+    &__img--section {
+        @media screen and (min-width: 44.5em) {
+            align-self: center;
         }
     }
 
@@ -192,12 +187,36 @@
 
         @media screen and (min-width: 44.5em) {
             clip-path: polygon(0% 0%, 76% 0, 100% 50%, 81% 100%, 0% 100%);
+            margin-bottom: -.4rem;
         }
     }
 
     &__list--section {
         padding: 0 4rem;
         margin: 2rem 0;
+
+        .main__titles {
+            text-align: start;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        @media screen and (min-width: 44.5em) {
+            @include flexColumnStart;
+
+            .main__titles {
+                margin: 0 0 2rem -2.5rem;
+                font-size: 2rem;
+
+                @media screen and (min-width: 50.75em) {
+                    font-size: 3rem;
+                }
+
+                @media screen and (min-width: 57.5em) {
+                    font-size: 4rem;
+                }
+            }
+        }
 
         a {
             @media screen and (min-width: 57em) {
@@ -206,19 +225,28 @@
         }
     }
     &__list {
-        margin-bottom: 3rem;
-        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
         @include flexColumnStart;
 
-        @media screen and (min-width: 57em) {
+        @media screen and (min-width: 61.25em) {
             font-size: 2rem;
         }
 
         li {
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
 
-            @media screen and (min-width: 57em) {
-                margin-bottom: 1.5rem;
+            @media screen and (min-width: 44.5em) {
+                font-size: 1.5rem;
+            }
+
+            @media screen and (min-width: 50.75em) {
+                font-size: 1.8rem;
+            }
+
+            @media screen and (min-width: 57.5em) {
+                margin-bottom: 2.2rem;
+                font-size: 2rem;
             }
         }
 

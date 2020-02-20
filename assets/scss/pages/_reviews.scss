@@ -1,7 +1,7 @@
 .reviews {
 
     &__intro {
-        margin: 2rem 0 5rem;
+        margin: 5rem 0;
         p {
             font-size: 1.5rem;
             padding: 0 2rem;
@@ -26,7 +26,7 @@
             grid-gap: 2rem;
             justify-content: center;
             align-items: center;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 6rem auto;
             
         }
@@ -139,16 +139,16 @@
         flex-direction: column;
 
         @media screen and (min-width: 40.31em) {
-            @include maxWidthLarge;
+            @include maxWidth;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 3rem;
+            grid-column-gap: 5rem;
         }
 
-        @media screen and (min-width: 75em) {
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 4rem;
-        }
+        // @media screen and (min-width: 75em) {
+        //     grid-template-columns: repeat(4, 1fr);
+        //     grid-gap: 4rem;
+        // }
     }
 
     &__item {
