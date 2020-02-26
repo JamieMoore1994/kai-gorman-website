@@ -49,9 +49,7 @@
     background-color: $color-black;
     min-height: 12vh;
     padding: 2rem;
-    // To be changed with gsap, fixes rendering issue before animation
-    visibility: hidden;
-
+    
     &--container {
         
         @include flexBetween;

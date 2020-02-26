@@ -29,18 +29,9 @@ function introScene() {
 
 // Fixing the issue of page rendering before the animation begins
 window.addEventListener("load", function(e) {
-    gsap.set(".master__header", {
-        autoAlpha: 1
-    });
-    gsap.set(".page__header", {
-        autoAlpha: 1
-    });
-    gsap.set(".page__header--wrapper", {
-        autoAlpha: 1
-    });
     gsap.set(".master__header--links", {
         autoAlpha: 1
     });
-    responsiveNav();
+    responsiveNav();    
     introScene();
 });
