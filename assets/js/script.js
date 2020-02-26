@@ -2,10 +2,9 @@
 const responsiveNav = function() {
     var nav = document.querySelector('.master__header--nav');
     var burger = document.querySelector('.master__header--burger');
-    var body = document.querySelector('body');
+    var headerContainer = document.querySelector('.master__header--container');
 
     burger.addEventListener('click', function() {
-        body.classList.toggle('body-toggle');
         nav.classList.toggle('nav-toggle');
     });
 }

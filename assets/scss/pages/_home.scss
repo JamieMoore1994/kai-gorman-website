@@ -89,18 +89,29 @@
 .help {
     padding: 2rem;
 
+    .main__titles {
+        padding: 2rem;
+
+        @media screen and (min-width: 44.9em) {
+            padding-bottom: 3rem;
+        }
+    }
+
     &__services {
         list-style: none;
 
         a {
             text-decoration: none;
+            display: block;
+            height: 100%;
         }
 
         @media screen and (min-width: 44.9em) {
             @include maxWidth;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 2rem;
+            grid-column-gap: 4rem;
+            grid-row-gap: 6rem;
         }
     }
 
@@ -113,7 +124,8 @@
         transition: all 200ms ease-in-out;
 
         @media screen and (min-width: 44.9em) {
-            
+            margin: 0;
+            height: 100%
         }
 
         p {

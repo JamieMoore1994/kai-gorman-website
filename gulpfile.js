@@ -7,7 +7,7 @@ const postcss = require('gulp-postcss');
 
 // File the path variables
 const files = {
-    // Gets all the scss files within the app folder and sub-folders
+    // Gets the main scss file
     scssPath: 'assets/scss/main.scss'
 }
 

@@ -218,6 +218,10 @@
         padding: 0 1rem;
         @include flexColumnCenter;
 
+        @media screen and (min-width: 41.87em) {
+            @include flexColumnStart;
+        }
+
         &--title {
             font-size: 1.8rem;
             color: $color-grey-light;
@@ -261,18 +265,14 @@
 
             li {
                 font-size: 1.2rem;
-                margin: 1.5rem 0;
+                margin: 2rem 0;
 
                 @media screen and (min-width: 23.12em) {
                     font-size: 1.5rem;
                 }
 
-                @media screen and (min-width: 23.12em) {
+                @media screen and (min-width: 65em) {
                     font-size: 1.8rem;
-                }
-
-                @media screen and (min-width: 41.87em) {
-                    font-size: 2rem;
                 }
             }
         }
