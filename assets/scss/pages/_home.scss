@@ -192,7 +192,8 @@
         flex-direction: column;
 
         @media screen and (min-width: 44.5em) {
-            margin-top: 5rem;
+            margin: 5rem auto 0 auto;
+            max-width: 1600px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
@@ -220,7 +221,7 @@
         @include flexColumnCenter;
 
         .main__titles {
-            text-align: start;
+            text-align: center;
             font-size: 4rem;
             margin-bottom: 2rem;
             justify-self: center;

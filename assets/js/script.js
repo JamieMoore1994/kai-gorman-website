@@ -2,11 +2,18 @@
 const responsiveNav = function() {
     var nav = document.querySelector('.master__header--nav');
     var burger = document.querySelector('.master__header--burger');
+    var lineOne = document.querySelector('.line-one');
+    var lineTwo = document.querySelector('.line-two');
+    var lineThree = document.querySelector('.line-three');
     var body = document.querySelector('body');
 
     burger.addEventListener('click', function() {
         body.classList.toggle('body-toggle');
         nav.classList.toggle('nav-toggle');
+
+        lineOne.classList.toggle('animate');
+        lineTwo.classList.toggle('animate');
+        lineThree.classList.toggle('animate');
     });
 }
 
