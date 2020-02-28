@@ -24,8 +24,8 @@ function introScene() {
         tl.from(logo, {yPercent: -100, duration: 0.5});
         tl.from(burgerDiv, {yPercent: -100, duration: 0.5}, "<");
         tl.from(navLinks, {yPercent: -100, duration: 0.5}, "<")
-        tl.from(introWrapper, {xPercent: -100, duration: 1}, "-=0.4")
-        tl.from(bannerImg, {xPercent: 100, duration: 1}, "-=0.4");
+        tl.from(introWrapper, {xPercent: -100, duration: 1}, "<-=0.8")
+        tl.from(bannerImg, {xPercent: 100, duration: 1, ease: "back.out(1)"}, "-=0.5");
 };
 
 // Fixing the issue of page rendering before the animation begins
