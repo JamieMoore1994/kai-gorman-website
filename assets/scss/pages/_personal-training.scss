@@ -141,7 +141,7 @@
     // Price for the workshop section
     &__price {
         @include flexColumnCenter;
-        margin-bottom: 4rem;
+        margin: 1.6rem 0 4rem 0;
         position: relative;
 
         &::after {
@@ -281,10 +281,11 @@
         color: $color-grey-dark;
         font-size: 1.3rem;
         font-style: italic;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         @media screen and (min-width: 55em) {
             font-size: 1.5rem;
+            margin-bottom: 1.8rem
         }
     }
 

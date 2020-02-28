@@ -115,6 +115,7 @@
     padding: 2.5rem;
     background-color: $color-black;
     line-height: 1.2;
+    position: relative;
 
     .career__wrapper {
 
@@ -126,10 +127,11 @@
 
     .love, .achievements {
         margin-bottom: 5rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
+        @include flexColumnCenter;
+
+        @media screen and (min-width: 42.56em) {
+            align-items: flex-start;
+        }
     }
 
 
@@ -138,7 +140,7 @@
         font-size: 1.5rem;
         position: relative;
 
-        @media screen and (min-width: 42.56em) {
+        @media screen and (min-width: 50em) {
             font-size: 1.8rem;
         }
 

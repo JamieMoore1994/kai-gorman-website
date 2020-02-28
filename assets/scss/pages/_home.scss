@@ -22,6 +22,7 @@
     &--wrapper {
         @include flexColumnStart;
         margin: 2rem 0;
+        visibility: hidden;
 
         @media screen and (min-width: 46.75em) {
             flex: 0 0 50vw;
@@ -75,11 +76,18 @@
 
     &--image {
         margin-top: 2rem;
+        visibility: hidden;
+        
         img {
             display: block;
         }
     }
 
+}
+
+.page__header.menu--toggle {
+    position: relative;
+    top: 12vh;
 }
 
 /*-----------------------------
@@ -146,7 +154,7 @@
         }
 
         .btn {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
 
             @media screen and (min-width: 50em) {
                 font-size: 1.5rem;
@@ -179,10 +187,6 @@
 .choose {
     padding: 5rem 0 0 0;
 
-    .main__titles {
-        margin-bottom: 3rem;
-    }
-
     &__container {
         display: flex;
         flex-direction: column;
@@ -213,15 +217,18 @@
     &__list--section {
         padding: 0 4rem;
         margin: 2rem 0;
+        @include flexColumnCenter;
 
         .main__titles {
             text-align: start;
             font-size: 4rem;
             margin-bottom: 2rem;
+            justify-self: center;
         }
 
         @media screen and (min-width: 44.5em) {
-            @include flexColumnStart;
+            justify-content: center;
+            align-items: flex-start;
 
             .main__titles {
                 margin: 0 0 2rem -2.5rem;
@@ -413,11 +420,7 @@
 .location {
     margin: 2.5rem 0;
     padding: 2rem;
-    @include flexColumnStart;
-
-    @media screen and (min-width: 44.5em) {
-        @include flexColumnCenter;
-    }
+    @include flexColumnCenter;
 
     p {
         font-size: 1.5rem;

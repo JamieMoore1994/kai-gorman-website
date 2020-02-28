@@ -1,0 +1,16 @@
+<svg class = "arrow-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.17 33.64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>arrow-up</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="arrow-up">
+      <path class="cls-1" d="M2.82,31.88,19,5.87l2.26-3.65c1-1.64-1.57-3.15-2.59-1.51l-16.14,26L.23,30.36c-1,1.65,1.58,3.16,2.59,1.52Z"/>
+      <path class="cls-1" d="M39,31.4,23.65,4.89,21.5,1.18a1.5,1.5,0,0,0-2.59,1.51L34.22,29.2l2.14,3.72A1.5,1.5,0,0,0,39,31.4Z"/>
+    </g>
+  </g>
+</svg>

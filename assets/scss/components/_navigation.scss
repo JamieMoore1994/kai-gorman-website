@@ -42,6 +42,36 @@
     }
 }
 
+.skip-top {
+   position: absolute;
+   display: block;
+   bottom: 1vw;
+   left: 88vw;
+   background-color: $color-green-main;
+   opacity: 0.6;
+   padding: 1rem;
+   border-radius: 1rem;
+   transition: opacity 200ms ease-in;
+
+   @media screen and (min-width: 50em) {
+       left: 92vw;
+   }
+
+   &:hover, &:focus {
+       opacity: 0.8;
+   }
+}
+
+.arrow-image {
+    width: 1rem;
+    height: 1rem;
+
+    @media screen and (min-width: 28.12em) {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
 /*------------------------------
     Navigation
 ------------------------------*/
@@ -51,7 +81,6 @@
     padding: 2rem;
     
     &--container {
-        
         @include flexBetween;
 
         @media screen and (min-width: 52.43em) {
@@ -160,10 +189,6 @@
         transform: translateX(0);
     }
 
-    .body-toggle {
-        overflow: hidden;
-    }
-
     &--burger {
         display: block;
         cursor: pointer;
@@ -179,4 +204,9 @@
             display: none;
         }
     }
+}
+
+// Toggle class to avoid scrolling in background
+.body-toggle {
+    overflow: hidden;
 }
