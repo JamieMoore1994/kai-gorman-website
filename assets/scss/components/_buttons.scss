@@ -20,7 +20,7 @@
 }
 
 .btn.btn-light {
-    background-color: $color-green-light;
+    background-color: $color-green-button;
 
     &:hover, &:focus {
         background-color: $color-green-main;
@@ -31,6 +31,6 @@
     background-color: $color-green-main;
 
     &:hover, &:focus {
-        background-color: $color-green-light;
+        background-color: $color-green-button;
     }
 }   

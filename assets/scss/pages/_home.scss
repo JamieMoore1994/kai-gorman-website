@@ -391,7 +391,7 @@
     &__responses {
         position: relative;
 
-        p {
+        blockquote {
             margin-bottom: 2rem;
             font-size: 1.5rem;
             position: relative;
@@ -401,7 +401,7 @@
             }
         }
 
-        p:last-of-type {
+        blockquote:last-of-type {
             margin-bottom: 4rem;
         }
 
