@@ -219,25 +219,13 @@
 
         li:nth-of-type(3) {
             .testimonials__item--text::before {
-                top: -7%;
-
-                @media screen and (min-width: 27.5em) {
-                    top: -10%;
-                }
-
-                @media screen and (min-width: 40.31em) {
-                    top: -6%;
-                }
+                top: -8%;
             }
         }
 
         li:nth-of-type(4) {
             .testimonials__item--text::before {
-                top: -14%;
-
-                @media screen and (min-width: 27.5em) {
-                    top: -16%;
-                }
+                top: -10%;
             }
         }
     }

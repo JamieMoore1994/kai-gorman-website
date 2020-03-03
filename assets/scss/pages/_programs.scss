@@ -65,6 +65,16 @@
         &::after {
             border-top: 4rem solid $color-brown;
         }
+
+        .btn {
+            background-color: $color-grey-light;
+            color: $color-brown;
+
+            &:hover, &:focus {
+                background-color: $color-grey-tint;
+                color: $color-brown-dark;
+            }
+        }
     }
 
     &__section.silver {
@@ -73,10 +83,28 @@
         &::after {
             border-top: 4rem solid $color-silver;
         }
+        
+        .btn {
+            background-color: $color-grey-light;
+            color: $color-silver;
+
+            &:hover, &:focus {
+                background-color: $color-silver-button;
+            }
+        }
     }
 
     &__section.gold {
         background-color: $color-gold;
+
+        .btn {
+            background-color: $color-grey-light;
+            color: $color-gold;
+
+            &:hover, &:focus {
+                background-color: $color-silver-button;
+            }
+        }
     }
 
     &__section {
@@ -240,12 +268,7 @@
                 height: 1rem;
                 width: 1rem;
                 margin-right: 1rem;
-
-                @media screen and (min-width: 23.12em) {
-                    height: 1.4rem;
-                    width: 1.4rem;
-                    margin-right: 2rem;
-                }
+                
 
                 @media screen and (min-width: 23.12em) {
                     height: 1.6rem;
@@ -253,8 +276,8 @@
                 }
 
                 @media screen and (min-width: 41.87em) {
-                    height: 2.2rem;
-                    width: 2.2rem;
+                    height: 2rem;
+                    width: 2rem;
                 }
                 
             }
